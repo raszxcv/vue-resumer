@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-# resumer
+# vue-resumer
+vue制作的简历生成工具
+
 
 > A Vue.js project
 
@@ -25,8 +26,4 @@ npm run unit
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-=======
-# vue-resumer
-vue制作的简历生成工具
->>>>>>> cedcc1e15c972143d9b3b03f00b9738f64ca84cb
+
