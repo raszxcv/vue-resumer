@@ -1,38 +1,47 @@
 
 #page {
+  min-width: 1024px;
   height: 100vh;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction:column;
-      flex-direction:column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   background: #EAEBEC;
 }
-#page>main{
-  min-width:1024px;
-  max-width:1440px;
-  margin:0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack:justify;
-      justify-content:space-between;
-  padding: 0 16px;
-  -ms-flex-positive:1;
-      flex-grow:1;
-  margin-top:16px;
-  margin-bottom:16px;
-  width:100%;
-  -ms-flex-item-align:center;
-      align-self:center;
+#page > main {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
 }
-#ResumeEditor{
-    width: 35%;
-     background: #444;
+#page > main {
+    min-width: 1024px;
+    max-width: 1440px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    padding: 0 16px;
+    width: 100%;
+    -ms-flex-item-align: center;
+        align-self: center;
 }
-#ResumePreview{
-     background: #777;
-     -ms-flex-positive: 1;
-         flex-grow: 1;
-     margin-left:16px;
+#ResumeEditor {
+  width: 35%;
+  background: #444;
+}
+#ResumePreview {
+  background: #777;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  margin-left: 16px;
+}
+svg.icon {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  vertical-align: -0.1em;
+  font-size: 16px;
 }
 *{margin:0; padding:0; box-sizing: border-box; }
 *::after, *::before{box-sizing:border-box;}/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -497,31 +506,98 @@ template {
   display: none;
 }
 
-#topbar[data-v-12e45004]{
-	background:#fff;
-	box-shadow:0 1px 3px 0 rgba(0,0,0,0.25);
+#topbar[data-v-12e45004] {
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
 }
-#topbar>.wrapper[data-v-12e45004]{
-	min-width:1024px;
-	max-width:1440px;
-	margin:0 auto;
-	height:64px;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: justify;
-	    justify-content: space-between;
-	-ms-flex-align:center;
-	    align-items:center;
-	padding:0 16px;
+#topbar > .wrapper[data-v-12e45004] {
+    min-width: 1024px;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 64px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 0 16px;
 }
-#topbar .logo[data-v-12e45004]{
-	font-size: 24px;
-	color:#000;
+#topbar > .wrapper > .logo[data-v-12e45004] {
+      font-size: 24px;
+      color: #000;
+}
+button[data-v-12e45004] {
+  width: 72px;
+  height: 32px;
+  font-size: 18px;
+  color: #222;
+  text-align: center;
+  background: #ddd;
+  cursor: point;
+  border: none;
+}
+button[data-v-12e45004]:hover {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+button.primary[data-v-12e45004] {
+    background: #02af5f;
+    color: #fff;
 }
 
-#ResumeEditor[data-v-53358100]{
-	background:#fff;
-	box-shadow:0 1px 3px 0 rgba(0,0,0,0.25);
+#ResumeEditor {
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  overflow: auto;
+}
+#ResumeEditor > nav {
+    width: 80px;
+    background: black;
+    color: white;
+}
+#ResumeEditor > nav > ol > li {
+      height: 48px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      margin-top: 16px;
+      margin-bottom: 16px;
+}
+#ResumeEditor > nav > ol > li.active {
+        background: white;
+        color: black;
+}
+#ResumeEditor > .panels {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+}
+#ResumeEditor > .panels > li {
+      padding: 24px;
+}
+#ResumeEditor svg.icon {
+    width: 24px;
+    height: 24px;
+}
+ol {
+  list-style: none;
+}
+.resumeField > label {
+  display: block;
+}
+.resumeField input[type=text] {
+  margin: 16px 0;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 40px;
+  padding: 0 8px;
 }
 
 #ResumePreview[data-v-0452b645]{
@@ -544,4 +620,4 @@ a[data-v-524cd6bc] {
   color: #42b983;
 }
 
-/*# sourceMappingURL=app.aaf7da0290922652aa133de4b10e57e1.css.map*/
+/*# sourceMappingURL=app.a5cb93353b3b449e6ea9489a2bbbda2b.css.map*/
