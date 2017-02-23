@@ -27,7 +27,7 @@
         align-self: center;
 }
 #ResumeEditor {
-  width: 35%;
+  min-width: 35%;
   background: #444;
 }
 #ResumePreview {
@@ -592,7 +592,7 @@ ol {
   display: block;
 }
 .resumeField input[type=text] {
-  margin: 16px 0;
+  margin: 20px 0;
   border: 1px solid #ddd;
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
   width: 100%;
@@ -600,9 +600,55 @@ ol {
   padding: 0 8px;
 }
 
-#ResumePreview[data-v-0452b645]{
-	background:#fff;
-	box-shadow:0 1px 3px 0 rgba(0,0,0,0.25);
+#ResumePreview[data-v-0452b645] {
+  background: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  padding: 2em;
+  color: #333;
+  line-height: 1.2;
+  overflow: auto;
+}
+#ResumePreview *[data-v-0452b645] {
+    box-sizing: border-box;
+    font-variant: normal;
+    font-weight: normal;
+}
+#ResumePreview ol[data-v-0452b645] {
+    list-style: none;
+}
+#ResumePreview section + section[data-v-0452b645] {
+    margin-top: 2em;
+}
+#ResumePreview p[data-v-0452b645] {
+    white-space: pre-line;
+}
+#ResumePreview section > h2[data-v-0452b645]:first-child {
+    background: #ddd;
+    display: inline-block;
+    padding: .2em;
+    margin-bottom: .5em;
+}
+#ResumePreview section[data-name="profile"] > h1[data-v-0452b645] {
+    margin: .1em 0;
+    font-size: 4em;
+}
+#ResumePreview section[data-name="workHistory"] li + li[data-v-0452b645],
+  #ResumePreview section[data-name="projects"] li + li[data-v-0452b645],
+  #ResumePreview section[data-name="awards"] li + li[data-v-0452b645] {
+    margin-top: 1em;
+}
+#ResumePreview section[data-name="workHistory"] li h3[data-v-0452b645],
+  #ResumePreview section[data-name="projects"] li h3[data-v-0452b645],
+  #ResumePreview section[data-name="awards"] li h3[data-v-0452b645] {
+    border-bottom: 1px solid #999;
+    padding-bottom: .3em;
+    margin-bottom: .3em;
+}
+#ResumePreview section[data-name="education"] li[data-v-0452b645] {
+    line-height: 1.5;
+}
+#ResumePreview section[data-name="contacts"] td[data-v-0452b645]:first-child {
+    padding-right: 1em;
 }
 
 h1[data-v-524cd6bc], h2[data-v-524cd6bc] {
@@ -620,4 +666,4 @@ a[data-v-524cd6bc] {
   color: #42b983;
 }
 
-/*# sourceMappingURL=app.a5cb93353b3b449e6ea9489a2bbbda2b.css.map*/
+/*# sourceMappingURL=app.085af9a1b7638cac728764cb4175472a.css.map*/
