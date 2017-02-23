@@ -21,6 +21,7 @@ import Topbar from './components/TopBar'
 import ResumeEditor from './components/ResumeEditor'
 import ResumePreview from './components/ResumePreview'
 import icons from './assets/icons'
+import store from './store/index'
 export default {
   name: 'app',
   components:{
@@ -31,11 +32,7 @@ export default {
   created(){
     document.body.insertAdjacentHTML('afterbegin',icons)
   },
-  data() {
-    return {
-      text:"你好",
-    }    
-  }
+  store
 }
 </script>
 
@@ -63,7 +60,7 @@ export default {
   }
 }
 #ResumeEditor{
-  width: 35%;
+  min-width: 35%;
   background: #444;
 }
 #ResumePreview{
