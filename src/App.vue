@@ -1,13 +1,15 @@
 
 <template>
-  <div id="page">
-    <header>
-      <Topbar></Topbar>
-    </header>   
-    <main>
-      <ResumeEditor></ResumeEditor>
-      <ResumePreview></ResumePreview>
-    </main>
+  <div>
+    <div id="page">
+      <header>
+        <Topbar></Topbar>
+      </header>
+      <main>
+        <ResumeEditor></ResumeEditor>
+        <ResumePreview></ResumePreview>
+      </main>
+    </div>
   </div>
 </template>
 
@@ -22,6 +24,8 @@ import ResumeEditor from './components/ResumeEditor'
 import ResumePreview from './components/ResumePreview'
 import icons from './assets/icons'
 import store from './store/index'
+import AV from './lib/AVkey'
+import getAVUser from './lib/getAVUser'
 export default {
   name: 'app',
   components:{
@@ -31,6 +35,12 @@ export default {
   },
   created(){
     document.body.insertAdjacentHTML('afterbegin',icons)
+    let state = localStorage.getItem('state')
+    if(state){
+      state = JSON.parse(state)
+    }
+    this.$store.commit('initState',state)
+    this.$store.commit('setUser',getAVUser())
   },
   store
 }
@@ -55,7 +65,7 @@ export default {
     display: flex;
     justify-content: space-between;
     padding: 0 16px;
-    width: 100%;  
+    width: 100%;
     align-self: center;
   }
 }

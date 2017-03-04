@@ -527,7 +527,7 @@ template {
       font-size: 24px;
       color: #000;
 }
-button[data-v-12e45004] {
+.button[data-v-12e45004] {
   width: 72px;
   height: 32px;
   font-size: 18px;
@@ -536,16 +536,83 @@ button[data-v-12e45004] {
   background: #ddd;
   cursor: point;
   border: none;
+  text-decoration: none;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  vertical-align: middle;
 }
-button[data-v-12e45004]:hover {
+.button[data-v-12e45004]:hover {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-button.primary[data-v-12e45004] {
+.button.primary[data-v-12e45004] {
     background: #02af5f;
     color: #fff;
 }
+.actions[data-v-12e45004] {
+  display: -ms-flexbox;
+  display: flex;
+}
+.actions .userActions[data-v-12e45004] {
+    margin-right: 3em;
+}
+.actions .welcome[data-v-12e45004] {
+    margin-right: .5em;
+}
 
-#ResumeEditor {
+.wrapper[data-v-5083911a] {
+  position: fixed;
+  background: hlsa(0, 0%, 0%, 0.25);
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.dialog[data-v-5083911a] {
+  background: white;
+  min-width: 10em;
+  min-height: 4em;
+}
+.dialog > header[data-v-5083911a] {
+    padding: 16px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    background: #ccc;
+}
+.dialog > main[data-v-5083911a] {
+    padding: 16px;
+    background: #ccc;
+}
+.close[data-v-5083911a] {
+  cursor: pointer;
+}
+
+label[data-v-285814bc]{
+  text-align: center;
+  display:inline-block;
+  width:3em;
+}
+
+label[data-v-4fd9ca2c]{
+  text-align: center;
+  display:inline-block;
+  width:3em;
+}
+
+#ResumeEditor[data-v-53358100] {
   background: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
   display: -ms-flexbox;
@@ -554,12 +621,12 @@ button.primary[data-v-12e45004] {
       flex-direction: row;
   overflow: auto;
 }
-#ResumeEditor > nav {
+#ResumeEditor > nav[data-v-53358100] {
     width: 80px;
     background: black;
     color: white;
 }
-#ResumeEditor > nav > ol > li {
+#ResumeEditor > nav > ol > li[data-v-53358100] {
       height: 48px;
       display: -ms-flexbox;
       display: flex;
@@ -570,34 +637,74 @@ button.primary[data-v-12e45004] {
       margin-top: 16px;
       margin-bottom: 16px;
 }
-#ResumeEditor > nav > ol > li.active {
+#ResumeEditor > nav > ol > li.active[data-v-53358100] {
         background: white;
         color: black;
 }
-#ResumeEditor > .panels {
+#ResumeEditor > .panels[data-v-53358100] {
     -ms-flex-positive: 1;
         flex-grow: 1;
 }
-#ResumeEditor > .panels > li {
+#ResumeEditor > .panels > li[data-v-53358100] {
       padding: 24px;
 }
-#ResumeEditor svg.icon {
+#ResumeEditor svg.icon[data-v-53358100] {
     width: 24px;
     height: 24px;
 }
-ol {
+ol[data-v-53358100] {
   list-style: none;
+  overflow: auto;
 }
-.resumeField > label {
+.resumeField > label[data-v-53358100] {
   display: block;
 }
-.resumeField input[type=text] {
+.resumeField input[type=text][data-v-53358100] {
   margin: 20px 0;
   border: 1px solid #ddd;
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
   width: 100%;
   height: 40px;
   padding: 0 8px;
+}
+.resumeField textarea[data-v-53358100] {
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 40px;
+  padding: 0 8px;
+  transition: 0.3s;
+}
+.resumeField textarea[data-v-53358100]:focus {
+  height: 10em;
+  transition: 0.5s;
+}
+.btn[data-v-53358100] {
+  text-align: center;
+}
+.btn > .rem[data-v-53358100] {
+    background: #FF6347;
+}
+.btn > .rem[data-v-53358100]:hover {
+    color: #000;
+    background: red;
+    transition: 0.5s;
+}
+.btn > .add[data-v-53358100] {
+    background: #00BFFF;
+}
+.btn > .add[data-v-53358100]:hover {
+    color: #000;
+    background: deepskyblue;
+    transition: 0.5s;
+}
+.btn > a[data-v-53358100] {
+  display: inline-block;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
 }
 
 #ResumePreview[data-v-0452b645] {
@@ -666,4 +773,4 @@ a[data-v-524cd6bc] {
   color: #42b983;
 }
 
-/*# sourceMappingURL=app.085af9a1b7638cac728764cb4175472a.css.map*/
+/*# sourceMappingURL=app.528a04a047f5ff3c5d818f74ce564071.css.map*/

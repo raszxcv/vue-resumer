@@ -3,12 +3,12 @@
 
     <section data-name="profile" v-show="resume.profile">
       <h1>
-        {{resume.profile.name.cnt}}
+        {{resume.profile.name}}
       </h1>
-      <h2>{{resume.profile.title.cnt}}</h2>
+      <h2>{{resume.profile.title}}</h2>
       <p>
-        <small>{{resume.profile.city.cnt}}</small>
-        <small>{{resume.profile.birthday.cnt}}</small>
+        <small>{{resume.profile.city}}</small>
+        <small>{{resume.profile.birthday}}</small>
       </p>
     </section>
 
@@ -17,7 +17,7 @@
       <ol>
         <li v-for="item in resume.projects">
           <h3>{{item.name}}</h3>
-          <p v-show="item.content"> {{item.content}} </p>
+          <p v-show="item.contents"> {{item.contents}} </p>
         </li>
       </ol>
     </section>
@@ -27,7 +27,7 @@
       <ol>
         <li v-for="item in resume.workHistory">
           <h3>{{item.company}}</h3>
-          <p v-show="item.content"> {{item.content}} </p>
+          <p v-show="item.contents"> {{item.contents}} </p>
         </li>
       </ol>
     </section>
@@ -87,9 +87,9 @@ export default {
     * {box-sizing: border-box; font-variant: normal; font-weight: normal;}
     ol{ list-style: none; }
     section + section{ margin-top: 2em; }
-    p{ white-space: pre-line; } 
+    p{ white-space: pre-line; }
     section {
-      > h2:first-child{ background: #ddd; display: inline-block; padding: .2em; 
+      > h2:first-child{ background: #ddd; display: inline-block; padding: .2em;
         margin-bottom: .5em;
       }
     }
